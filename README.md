@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View Code](https://github.com/ortalyarts/frontendmentor-frontend-quiz-app)
+- Live Site URL: [Preview Site](https://frontendmentor-frontend-quiz-app.vercel.app/)
 
 ## My process
 
@@ -68,8 +68,8 @@ Users should be able to:
 
 - [Animated background on text](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip) + (https://www.frontendhero.dev/tutorial/mask-text-with-image/ )- Mask text with an image in CSS
 - [role="listbox"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) - I used it for the selecting subject options
-- [CSS gradien generator](https://cssgradient.io/)
-- [Sparkles effect](https://youtu.be/BTzatHA9TD0?si=O9NmEAdSYEKy0F_I) - I used this tutorial as basis for the sparkle animation for the Score show.
+- [CSS gradient generator](https://cssgradient.io/)
+- [Sparkles effect](https://youtu.be/BTzatHA9TD0?si=O9NmEAdSYEKy0F_I) - I used this tutorial as basis for the sparkle animation for the Score appearance.
 
 ## Author
 
