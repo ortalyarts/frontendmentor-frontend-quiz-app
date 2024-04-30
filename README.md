@@ -54,9 +54,9 @@ Users should be able to:
 - Vanilla JavaScript
 - Mobile-first workflow
 - JSON to populate questions
-- CSS animations (tansition + @keyframes)
+- CSS animations (transition + @keyframes)
 - Light / Dark theme switch
-- Aria role listbox + option to add accesibillity for selecting subjects
+- Aria role listbox + option to add accessibility for selecting subjects
 - CSS @media (prefers-reduced-motion) + Fallback in JavaScript 
 - Chrome Screen reader - for accessibility check
 - Chrome Lighthouse
