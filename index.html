@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Ortalyarts" />
+  <meta
+    name="description"
+    content="Frontend quiz app"
+  />
+  <meta
+    name="keywords"
+    content="quiz, app, frontend, question"
+  />
+  <meta
+    property="og:title"
+    content="Frontend quiz app"
+  />
+  <meta
+    property="og:description"
+    content="Frontend Mentor | Frontend quiz app"
+  />
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Frontend quiz app</title>
+</head>
+<body>
+  
+  <div class="main-container">
+
+    <div class="top-main-holder">
+      <div class="heading-selected-subject"></div>
+        
+      <div class="switch-holder">
+        <div class="sun"></div> 
+        <label class="switch-container" for="theme-toggle-button">
+          <input name="theme-switch" id="theme-toggle-button" type="checkbox" >
+          <span class="screen-reader-only" id="toggle-announce" >switch to dark theme</span>
+        </label>
+        <div class="moon"></div> 
+      </div>
+    </div>
+   
+    <main>
+      <div class="quiz-main-container">
+        <header id="start-page" style="position:relative">
+          <h1 class="headingL homepage-title" id="page-title" tabindex="-1">
+            <span id="main-title-part1">Welcome to the</span>
+            <strong id="main-title-part2">Frontend Quiz!</strong>
+          </h1>
+          <h2 class="bodyS italic" id="sub-title">Pick a subject to get started.</h2>
+        </header>
+        <header id="question-page" class="hide" tabindex="-1">
+          <h1 class="bodyS italic">
+          </h1>
+          <h2 class="headingM" >
+          </h2>
+          <div class="progress-bar-holder">
+            <div id="progress-bar" class="progress-bar" style="width:0%">
+              <div class="progress-bar-animation"></div>
+            </div>
+          </div>
+        </header>
+        
+        <div class="quiz-holder">
+
+          <section id="subjects" >
+            <ul class="list-of-subjects options-holder" role="listbox" aria-labelledby="sub-title">
+              <li role="option"><a href="" class="subject bg-html" ><div class="icon-holder">
+                <img src="./assets/images/icon-html.svg" aria-hidden="true" alt="" width="40" height="40" />
+                </div>
+                <span class="headingS">HTML</span></a>
+              </li>
+              <li role="option"><a href="" class="subject bg-css" ><div class="icon-holder">
+                <img src="./assets/images/icon-css.svg" aria-hidden="true" alt="" width="40" height="40" />
+                </div>
+                <span class="headingS">CSS</span></a>
+              </li>
+              <li role="option"><a href="" class="subject bg-javascript" ><div class="icon-holder">
+                <img src="./assets/images/icon-js.svg" aria-hidden="true" alt="" width="40" height="40" />
+                </div>
+                <span class="headingS">JavaScript</span></a>
+              </li>
+              <li role="option"><a href="" class="subject bg-accessibility" > <div class="icon-holder">
+                <img src="./assets/images/icon-accessibility.svg" aria-hidden="true" alt="" width="40" height="40" />
+                </div>
+                <span class="headingS">Accessibility</span></a>
+              </li>
+            </ul>
+          </section>
+
+          <section id="questions" class="hide">
+            <form id="form" aria-label="Quiz" novalidate>
+              <div class="form-holder">
+      
+                <fieldset role="radiogroup" aria-labelledby="legend1">
+                  <legend id="legend1" class="screen-reader-only">Select an answer</legend>
+                  <div class="options-holder">
+                    <label class="radio-label" for="option-0">
+                      <div class="icon-holder headingS" >
+                        A
+                      </div>
+                      <span class="headingS js-slide"></span>
+                      <input class="radio-input" type="radio" value="HTML" name="option" id="option-0">
+                    </label>              
+                    <label class="radio-label" for="option-1">
+                      <div class="icon-holder headingS" >
+                        B
+                      </div>
+                      <span class="headingS js-slide"></span>
+                      <input class="radio-input" type="radio" value="CSS" name="option" id="option-1">
+                    </label>              
+                    <label class="radio-label" for="option-2">
+                      <div class="icon-holder headingS" >
+                        C
+                      </div>
+                      <span class="headingS js-slide"></span>
+                      <input class="radio-input" type="radio" value="JavaScript" name="option" id="option-2">
+                    </label>              
+                    <label class="radio-label" for="option-3">
+                      <div class="icon-holder headingS" >
+                        D
+                      </div>
+                      <span class="headingS js-slide"></span>
+                      <input class="radio-input" type="radio" value="Accessibility" name="option" id="option-3">
+                    </label>                       
+                  </div>
+                </fieldset>
+
+              </div>
+              <button id="check-answer" type="button" class="btn headingS">Submit Answer</button> 
+              <button id="next-question" type="button" class="btn headingS hide" >Next Question</button> 
+              <button id="view-score" type="button" class="btn headingS hide">View the Score</button>
+              <div id="result-announcement" aria-live="assertive" class="screen-reader-only"></div>
+            </form>
+            <div id="invalid-message" class="invalid-message bodyM" tabindex="-1" aria-live="polite"></div>
+          </section>
+            
+          <section id="result" class="hide">
+            <div class="result-holder">
+              <div class="result-subject">
+                <div class="icon-holder">
+                  <img src="./assets/images/icon-html.svg" aria-hidden="true" alt="" width="40" height="40" />
+                </div>
+                <span class="headingS" id="result-selected-subject"></span>
+              </div>
+              <h3 class="score headingXL" aria-describedby="page-title" tabindex="-1">
+                <span id="score-number"></span>
+                <span class="bodyM">out of 10</span>
+              </h3>
+              <div class="sparkles-holder" id="sparkles1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="sparkles-holder" id="sparkles2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <button id="play-again" type="button" class="btn headingS">Play Again</button>
+          </section>
+
+        </div> <!--end quiz-holder-->
+      </div>
+    </main>
+
+  </div>
+  <footer>
+    <p>Challenge by <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a>.</p>
+    <p>Coded by <a href="https://www.ortaly.com/" target="_blank">OrtalyARTS</a>.</p>
+  </footer>
+
+  <script src="main.js" ></script>
+</body>
+</html>
