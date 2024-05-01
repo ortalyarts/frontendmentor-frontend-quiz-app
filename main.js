@@ -4,20 +4,23 @@ const toggleSwitch = document.querySelector('#theme-toggle-button');
 const btnToggleText = document.querySelector('#toggle-announce');
 
 //function that changes the theme, and sets a localStorage variable to track the theme between page loads
+const switchToDarkTheme = () => {
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+    toggleSwitch.checked = true;
+    btnToggleText.innerText = "switch to light theme";
+}
+const switchToLightTheme = () => {
+    localStorage.setItem('theme', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+    toggleSwitch.checked = false;
+    btnToggleText.innerText = "switch to dark theme";
+}
 function switchTheme(e) {
-    
     if (e.target.checked) {
-        //console.log(toggleSwitch + " checked");
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggleSwitch.checked = true;
-        btnToggleText.innerText = "switch to light theme";
+        switchToDarkTheme();
     } else {
-        //console.log(toggleSwitch + " unchecked");
-        localStorage.setItem('theme', 'light');
-        document.documentElement.setAttribute('data-theme', 'light');
-        toggleSwitch.checked = false;
-        btnToggleText.innerText = "switch to dark theme";
+        switchToLightTheme();
     }    
 }
 
@@ -25,9 +28,11 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 //pre-check the dark-theme checkbox if dark-theme is set
-if (document.documentElement.getAttribute("data-theme") == "dark"){
-    toggleSwitch.checked = true;
-}
+const mediaQueryDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+if (mediaQueryDarkMode && mediaQueryDarkMode.matches) {
+    switchToDarkTheme();
+};
+
 
 // Get data from JSON
 

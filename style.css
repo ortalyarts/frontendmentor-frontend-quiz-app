@@ -119,6 +119,7 @@ html[data-theme="dark"] {
         color: var(--text-color1);
     }
   }
+
 /* === End Dark scheme ==== */
 .headingXL {
     font-size: 5.5rem;
