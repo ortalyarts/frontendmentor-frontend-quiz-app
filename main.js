@@ -27,7 +27,7 @@ function switchTheme(e) {
 //listener for changing themes
 toggleSwitch.addEventListener('change', switchTheme, false);
 
-//pre-check the dark-theme checkbox if dark-theme is set
+//pre-check if the user has set dark color scheme in computer preferences
 const mediaQueryDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
 if (mediaQueryDarkMode && mediaQueryDarkMode.matches) {
     switchToDarkTheme();
