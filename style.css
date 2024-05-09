@@ -127,22 +127,22 @@ html[data-theme="dark"] {
     font-weight: 400;
   }
   .headingL {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 7.385vw + 0.769rem, 4rem);
     line-height: 100%;
     font-weight: 400;
   }
   .headingL-bold {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 7.385vw + 0.769rem, 4rem);
     line-height: 100%;
     font-weight: 700;
   }
   .headingM {
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 4.923vw + 0.096rem, 2.25rem);
     line-height: 120%;
     font-weight: 500;
   }
   .headingS {
-    font-size: 0.875rem;
+    font-size: clamp(1.125rem, 3.077vw + 0.404rem, 1.75rem);
     line-height: 100%;
     font-weight: 500;
   }
@@ -289,16 +289,16 @@ label.switch-container {
   }
   .radio-label, .subject {
     display: grid;
-    grid-template-columns: 3.5rem auto;
-    gap:2rem;
+    grid-template-columns: 2.5rem auto;
+    gap:1rem;
     align-items: center;
     position: relative;
     text-align: left;
     background-color: var(--background-color1);
     background-position:left 1.25rem center;
     background-repeat:no-repeat;
-    padding: 1.125rem 4rem 1.25rem 1.25rem;
-    min-height:6rem;
+    padding: 0.75rem 4rem 0.75rem 0.75rem;
+    min-height:4rem;
     border-radius:1.5rem;
     box-shadow: var(--shadow1);
     cursor: pointer;
@@ -336,8 +336,8 @@ label.switch-container {
     background-color: var(--background-color-7);
   }
   .icon-holder {
-    width:3.5rem;
-    height:3.5rem;
+    width:2.5rem;
+    height:2.5rem;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -371,7 +371,7 @@ label.switch-container {
   }
 
   .btn {
-    height:5.75rem;
+    height:3.5rem;
     width:100%;
     border-radius: 1.5rem;
     border:none;
@@ -395,6 +395,10 @@ label.switch-container {
     grid-template-columns: 3.5rem auto;
     gap: 1.5rem;
     align-items: center;
+}
+
+#question-page {
+  position:relative;
 }
 
 #question-page .headingM {
@@ -625,13 +629,7 @@ footer a {
   }
 
 
-/* @media screen and (min-width:60rem){
-    body {
-        background-position: left top -10rem;
-        background-size:50% auto;
-    }
-} */
-@media screen and (min-width:23.438rem){
+@media screen and (min-width:43rem){
     .headingXL {
         font-size: 9rem;
       }
@@ -650,6 +648,20 @@ footer a {
       .bodyS, .bodyS p{
         font-size: 1.25rem;
       }
+      .icon-holder {
+        width:3.5rem;
+        height:3.5rem;
+      }
+      .radio-label, .subject {
+        grid-template-columns: 3.5rem auto;
+        gap:2rem;
+        padding: 1.125rem 4rem 1.25rem 1.25rem;
+        min-height:6rem;
+      }
+      .btn {
+        height:5.75rem;
+      }
+      
 }
 @media screen and (min-width:60rem){
     body {
@@ -697,10 +709,10 @@ footer a {
         margin-top:2rem;
     }
     
-    footer {
+    /* footer {
         position:absolute;
         bottom:0rem;
-    }
+    } */
 }
 
 /* sparkles animation on the result page */
